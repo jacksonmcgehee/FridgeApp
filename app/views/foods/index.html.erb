@@ -1,0 +1,13 @@
+<h1>Vittles</h1>
+<br/>
+<% @foods.each do |food| %>
+    <ul>
+      <lh><%= food.name %></lh>
+      <li><%= food.weight %></li>
+      <li><%= food.is_vegan %></li>
+      <li><%= food.fridge_id %></li>
+      <li><%= food.created_at %></li>
+    </ul>
+  <% end %>
+
+<%= link_to '<button type="button">Make Food</button>'.html_safe, fridges_food_new_url %>

@@ -1,0 +1,16 @@
+<h1>Fridge Fridge Fridge-a-delphia!</h1>
+<br/>
+<hr/>
+<% @fridges.each do |fridge| %>
+    <ul>
+      <lh><%= fridge.brand %></lh>
+      <li><%= fridge.location %></li>
+      <li><%= fridge.size %></li>
+      <li><%= fridge.has_food %></li>
+      <li><%= fridge.has_drink %></li>
+    </ul>
+  <% end %>
+
+<%= link_to '<button type="button">New Fridge</button>'.html_safe, fridges_new_path %> 
+
+

@@ -1,0 +1,25 @@
+
+<h1>Make a new food</h1>
+
+
+<%= form_for @foods do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :weight %>
+      <%= f.text_field :weight %>
+    </div>
+    <div>
+      <%= f.label :fridge_id %>
+      <%= f.text_field :fridge_id %>
+    </div>
+    <div>
+      <%= f.label :is_vegan %>
+      <%= f.check_box :is_vegan %>
+    </div>
+    <%= f.submit "Create" %>
+  <% end %>
+
+  <%= link_to '<button type="button">Home</button>'.html_safe, fridges_path %> 

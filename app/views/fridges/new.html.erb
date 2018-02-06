@@ -1,0 +1,29 @@
+
+<h1>Make a new fridge</h1>
+
+
+<%= form_for @fridges do |f| %>
+    <div>
+      <%= f.label :brand %>
+      <%= f.text_field :brand %>
+    </div>
+    <div>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+    <div>
+      <%= f.label :size %>
+      <%= f.text_field :size %>
+    </div>
+    <div>
+      <%= f.label :has_food %>
+      <%= f.check_box :has_food %>
+    </div>
+    <div>
+      <%= f.label :has_drink %>
+      <%= f.check_box :has_drink %>
+    </div>
+    <%= f.submit "Create" %>
+  <% end %>
+
+  <%= link_to '<button type="button">Home</button>'.html_safe, fridges_path %> 
